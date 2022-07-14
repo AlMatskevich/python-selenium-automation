@@ -15,10 +15,6 @@ assert expected_result1 == actual_result1, f'Expected {expected_result1} but got
 
 print('Test case "Sign In header is visible" pass')
 
-
-expected_result2 = 'email'
-actual_result2 = driver.find_element(By.XPATH, "//input [@type='email']").text
-assert expected_result2 == actual_result2, f'Expected {expected_result2} but got {actual_result2}'
-
-
+assert driver.find_element(By.ID, 'ap_email').is_displayed()
+print('Test case "Email input field is present" pass')
 driver.quit()
